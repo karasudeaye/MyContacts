@@ -3,11 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyContacts.Views.EditContactPage"
              Title="EditContactPage">
-    <VerticalStackLayout>
-        <Label 
-            x:Name="selectedContact"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Spacing="10" Padding="10,10,10,10">
+
+        <Label x:Name="selectedContact" FontSize="Medium" />
+
+
+        <Frame BorderColor="Silver" Padding="10,2,10,2" >
+            <HorizontalStackLayout>
+                <Label Text="Name" VerticalOptions="Center" WidthRequest="100"></Label>
+                <Entry x:Name="NameEntry" VerticalOptions="Center" WidthRequest="200"></Entry>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame BorderColor="Silver" Padding="10,2,10,2" >
+            <HorizontalStackLayout>
+                <Label Text="Phone" VerticalOptions="Center" WidthRequest="100"></Label>
+                <Entry x:Name="PhoneEntry" VerticalOptions="Center" WidthRequest="200"></Entry>
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame BorderColor="Silver" Padding="10,2,10,2" >
+            <HorizontalStackLayout>
+                <Label Text="EMail" VerticalOptions="Center" WidthRequest="100"></Label>
+                <Entry x:Name="EmailEntry" VerticalOptions="Center" WidthRequest="200"></Entry>
+            </HorizontalStackLayout>
+        </Frame>
+        <Button x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked"/>
+        <Button Text="Back" x:Name="BackButton" Clicked="BackButton_Clicked"></Button>
     </VerticalStackLayout>
 </ContentPage>
