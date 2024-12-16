@@ -27,7 +27,8 @@
                 <Entry x:Name="EmailEntry" VerticalOptions="Center" WidthRequest="200"></Entry>
             </HorizontalStackLayout>
         </Frame>
-        <Button x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked"/>
-        <Button Text="Back" x:Name="BackButton" Clicked="BackButton_Clicked"></Button>
+        <Button x:Name="SaveButton" Text="Save" BackgroundColor="Green" Clicked="SaveButton_Clicked"/>
+        <Button Text="Back" x:Name="BackButton" BackgroundColor="Gray" Clicked="BackButton_Clicked"></Button>
+        <Button Text="Delete" VerticalOptions="Center" BackgroundColor="Red" x:Name="DeleteButton" Clicked="DeleteButton_Clicked"></Button>
     </VerticalStackLayout>
 </ContentPage>

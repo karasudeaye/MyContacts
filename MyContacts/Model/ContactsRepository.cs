@@ -50,5 +50,10 @@ namespace MyContacts.Model
 
             await Task.CompletedTask;
         }
+        public async Task DeleteContact(ContactInfo contact)
+        {
+            contacts.Remove(contact); 
+            await Task.CompletedTask; 
+        }
     }
 }

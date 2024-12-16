@@ -35,6 +35,17 @@ namespace MyContacts.Views
             }
         }
 
+        private async void DeleteButton_Clicked(object sender, EventArgs e)
+        {
+            bool answer = await DisplayAlert("Are you Sure?", "Are you sure to delete", "Yes", "No");
+            if (answer)
+            {
+                await contactRepository.DeleteContact(contactInfo);
+                await Shell.Current.GoToAsync(".."); 
+            }
+        }
+
+
         private async void SaveButton_Clicked(object sender, EventArgs e)
         {
             contactInfo.NameSurname = NameEntry.Text;
